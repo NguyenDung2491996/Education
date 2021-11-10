@@ -1,0 +1,1364 @@
+/*
+========================= Table of content ==========================
+/*
+========================= Table of content ==========================
+1.Reset css
+2.Header
+3.Slide
+4.Benefits
+5.Find out more section
+6.Welcome section
+7.News section
+8.Registration section
+9.Course section
+10.Solution section
+11.Testimonails
+12.Footer
+
+
+
+*/
+
+*/
+/* =============== 1.Reset css =============== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dflex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+button:focus {
+    outline: none;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+button {
+    border: none;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+button {
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.bg-light {
+    background-color: var(--light);
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+
+.text-dark {
+    color: var(--dark);
+}
+
+.text-gray {
+    color: var(--gray);
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.p0 {
+    padding: 0;
+}
+
+.ml-15 {
+    margin-left: 15px;
+}
+
+
+/* .mb-1 {
+    margin-bottom: 4rem;
+} */
+
+.bg-orange {
+    background-color: var(--orange);
+}
+
+body {
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+
+/* =============== 2. Header =============== */
+
+.header {
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 8px 2px rgba(18, 18, 18, 0.06);
+    position: relative;
+}
+
+.header_bottom .logo img {
+    width: auto;
+}
+
+.header .header_bottom {
+    height: 9rem;
+    padding: 0 1rem;
+}
+
+.header_bottom .content {
+    justify-content: space-between;
+}
+
+.header_bottom .list_menu .list_item {
+    position: relative;
+}
+
+.header_bottom .list_menu .list_item>.list_link {
+    font-size: 1.6rem;
+    display: flex;
+    padding: 3rem 0rem 3rem 0rem;
+    color: #0f2a5b;
+    position: relative;
+    margin: 0 1.3rem;
+}
+
+
+/* .header_bottom .list_menu .list_item>.list_link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fd7e14;
+    display: none;
+} */
+
+.header_bottom .list_menu .list_item>.list_link::after {
+    content: "\f0d7";
+    font-family: "FontAwesome";
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.header_bottom .list_menu .list_item .sub_menu {
+    background-color: #fff;
+    width: 20rem;
+    position: absolute;
+    top: 8rem;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.header_bottom .list_menu .list_item:hover>.list_link {
+    border-top: 4px solid #ff5f13;
+    margin-top: -4px;
+}
+
+.header_bottom .list_menu .list_item:hover>.list_link::after {
+    content: "\f0d8";
+}
+
+.header_bottom .list_menu .list_item:hover .sub_menu {
+    opacity: 1;
+}
+
+.header_bottom .list_menu .list_item .sub_menu .list_item_sub:hover {
+    background-color: #ffc107;
+}
+
+.header_bottom .list_menu .list_item .sub_menu .list_item_sub {
+    border-bottom: 1px solid gray;
+    transition: 0.3s;
+    padding: 2rem;
+    position: relative;
+}
+
+.header_bottom .list_menu .list_item .sub_menu .list_item_sub .sub_menu_level2 {
+    position: absolute;
+    right: -20rem;
+    width: 20rem;
+    top: 0rem;
+    background-color: #fff;
+    opacity: 0;
+}
+
+.header_bottom .list_menu .list_item .sub_menu .list_item_sub:hover .sub_menu_level2 {
+    opacity: 1;
+}
+
+.header_bottom .list_menu .list_item .sub_menu .list_item_sub .sub_menu_level2 .list_item_sub_level2 {
+    padding: 2rem;
+    border-bottom: 1px solid gray;
+}
+
+.header_bottom .list_menu .list_item .sub_menu .list_item_sub .list_link {
+    font-size: 1.6rem;
+    color: #000;
+}
+
+.header_bottom .list_menu .list_item .sub_menu .list_item_sub:first-child::after {
+    content: "\f0da";
+    font-family: "FontAwesome";
+    position: absolute;
+    right: 2rem;
+    font-size: 1.6rem;
+}
+
+.header_bottom .icon {
+    display: none;
+}
+
+.header_bottom .button button {
+    font-size: 1.5rem;
+    padding: 1.8rem 1rem;
+    font-family: sans-serif;
+    color: #fff;
+    font-weight: 600;
+}
+
+.header_bottom .button {
+    padding-right: 1rem;
+}
+
+.header_bottom .button .enroll {
+    background-color: #fd7e14;
+    margin-right: .5rem;
+}
+
+.header_bottom .button .btn-contact {
+    background-color: #6c757d;
+}
+
+.header_bottom .icon_social .list_link {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    color: #343a40;
+    background-color: #f8f9fa;
+}
+
+.header_bottom .icon_social .list_link:not(:first-child) {
+    margin-left: 5px;
+}
+
+
+/* ======================== 3 .Banner ==================== */
+
+.slide {
+    background: url(../images/572.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.slide .content {
+    padding-left: 6rem;
+}
+
+.slide .content .text {
+    color: #fff;
+    padding-bottom: 3rem;
+}
+
+.slide .content .text .title {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+}
+
+.slide .content .text .desc {
+    font-size: 7rem;
+}
+
+.slide .content .button .buy_now {
+    font-size: 1.5rem;
+    padding: 1.8rem 2rem;
+    font-family: sans-serif;
+    color: #fff;
+    font-weight: 600;
+    background-color: #fd7e14;
+}
+
+
+/* ======================== 4. Benefits  ==================== */
+
+.benefits {
+    background-color: #231834;
+    padding: 4rem 0;
+}
+
+.benefits .list_item {
+    border: 2px solid gray;
+    border-radius: 4px;
+    padding: 4rem 0 3rem 0;
+    transition: 0.3s;
+}
+
+.benefits .list_item:hover {
+    background-color: rgb(108, 131, 162);
+}
+
+.benefits .list_item .icon {
+    color: #fd7e14;
+    font-size: 5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.benefits .list_item .text {
+    text-align: center;
+    color: #fff;
+}
+
+.benefits .list_item .text .title {
+    font-size: 2.4rem;
+    padding-bottom: 2rem;
+}
+
+.benefits .list_item .text .desc {
+    font-size: 1.6rem;
+    color: #a4acc3;
+    line-height: 1.5;
+}
+
+.benefits .text_right {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.benefits .text_right .title {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: #ff5f13;
+    padding-bottom: 2rem;
+}
+
+.benefits .text_right .desc {
+    color: #fff;
+    font-size: 4.5rem;
+}
+
+.benefits .text_right .button {}
+
+.benefits .content {
+    padding: 0 3rem;
+}
+
+
+/* ======================= 5. Find out more section ===============*/
+
+.find_out_more {}
+
+.find_out_more .content {
+    padding: 0 3rem;
+}
+
+.find_out_more .button {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3rem;
+}
+
+.find_out_more .button button {
+    background-color: #fff;
+    color: #000;
+    font-size: 1.6rem;
+    padding: 3rem 0 3rem 2rem;
+    border-radius: 4px;
+    text-align: left;
+    position: relative;
+    display: flex;
+    margin-top: -4rem;
+    width: 30%;
+    font-weight: 600;
+    font-family: sans-serif;
+    box-shadow: 0 4px 8px 2px rgba(18, 18, 18, 0.06);
+}
+
+.find_out_more .button button .fa-caret-right {
+    position: absolute;
+    right: 2rem;
+}
+
+
+/* ======================== 6. Welcome section  ==================== */
+
+.welcome {
+    padding: 7rem 0 5rem 0;
+}
+
+.welcome .content {
+    padding: 0 3rem;
+}
+
+.welcome .list_item .text {
+    padding-bottom: 3rem;
+}
+
+.welcome .list_item .text .title {
+    font-size: 3rem;
+    padding-bottom: 3rem;
+}
+
+.welcome .list_item .text .desc {
+    font-size: 1.7rem;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.welcome .list_item .list_activities {
+    padding-bottom: 2rem;
+}
+
+.welcome .list_item .list_activities .name {
+    font-size: 1.7rem;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+}
+
+.welcome .list_item .list_activities .name .circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    display: block;
+    background-color: #ff5f13;
+    margin-right: 1rem;
+}
+
+.welcome .list_item .button {
+    position: relative;
+    width: 80%;
+    margin-top: 1.5rem;
+}
+
+.welcome .list_item .button .btn-button {
+    background-color: #ff5f13;
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 2rem;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-weight: 600;
+    width: 100%;
+    text-align: left;
+}
+
+.welcome .list_item .button .btn-button .fa-caret-right {
+    position: absolute;
+    right: 2rem;
+}
+
+.welcome .list_item {
+    position: relative;
+}
+
+.welcome .list_item .image::before {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(45, 29, 84, 0.66);
+    content: "";
+}
+
+.welcome .list_item .play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcome .list_item .play .play_inner {
+    background-color: #ff8700;
+    width: 11.1rem;
+    height: 11.1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 19px solid #ffffff96;
+}
+
+.welcome .list_item .play .play_inner i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.welcome .list_item .text_bottom {
+    position: absolute;
+    bottom: 2rem;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 0 2rem
+}
+
+.welcome .list_item .text_bottom .title {
+    font-size: 2.4rem;
+    padding-bottom: 2rem;
+}
+
+.welcome .list_item .text_bottom .desc {
+    color: #9fa6bd;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.welcome .text_right {}
+
+.welcome .text_right .desc:nth-child(1) {
+    font-size: 1.7rem;
+    color: #0f2a5b;
+    padding-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.welcome .text_right .desc .letter {
+    font-size: 6rem;
+    color: #ff8700;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-right: 2.5rem;
+}
+
+.welcome .text_right>.desc:nth-child(2) {
+    font-size: 1.6rem;
+    padding-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.welcome .text_right img {
+    width: auto;
+}
+
+
+/* ======================== 7. News section  ==================== */
+
+.news {}
+
+.news .news_heading {
+    background: #0f2a5b;
+    padding: 6rem 3rem;
+}
+
+.news .news_heading .title {
+    font-size: 1.4rem;
+    padding-bottom: 2rem;
+    color: #ff5f13;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.news .news_heading .desc {
+    color: #fff;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.news .content {
+    padding: 4rem 1.5rem;
+}
+
+.news .content .image {
+    position: relative;
+    overflow: hidden;
+}
+
+.news .content .image::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    content: "";
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    z-index: 1;
+}
+
+.news .content .image img {
+    transition: 0.5s;
+}
+
+.news .content .image:hover::before {
+    opacity: 1;
+}
+
+.news .content .image:hover img {
+    transform: scale(1.1);
+}
+
+.news .content .list_news {
+    padding-bottom: 3rem;
+}
+
+.news .content .list_news .meta_data {
+    padding-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.news .content .list_news .meta_data .author {
+    padding-right: 1.5rem;
+    color: #0f2a5b;
+}
+
+.news .content .list_news .meta_data .time {
+    color: #383838;
+}
+
+.news .content .list_news .info {
+    padding-bottom: 1.5rem;
+}
+
+.news .content .list_news .info .title {
+    font-size: 2rem;
+    color: #0f2a5b;
+    padding-bottom: 1.5rem;
+}
+
+.news .content .list_news .info .description {
+    font-size: 1.6rem;
+    color: #383838;
+    line-height: 1.5;
+}
+
+.news .content .list_news .line {
+    background-color: #2690b1;
+    width: 3rem;
+    height: 3px;
+    margin-bottom: 1.5rem;
+}
+
+.news .content .list_news .posted_in {
+    font-size: 1.6rem;
+}
+
+.news .content .count_number {
+    border-top: 15px solid #ff8700;
+    margin-top: -18rem;
+    background-color: #fff;
+    height: 100%;
+    border-radius: 4px;
+    padding: 3.2rem 3rem 0 3rem;
+}
+
+.news .content .count_number .count_heading {
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.news .content .count_number .count_heading .title {
+    font-size: 1.6rem;
+    position: relative;
+}
+
+.news .content .count_number .count_heading .title::after {
+    content: "";
+    background-color: #ff8700;
+    height: 4px;
+    width: 5rem;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.news .content .count_number .count_item {
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.news .content .count_number .count_item .number {
+    color: #0f2a5b;
+    font-size: 5rem;
+}
+
+.news .content .count_number .count_item .object {
+    color: #383838;
+    font-size: 1.6rem;
+    padding-bottom: 1.5rem;
+}
+
+.news .content .count_number .count_item .desc {
+    font-size: 1.7rem;
+    line-height: 1.5;
+}
+
+
+/* ======================== 8. Registration section  ==================== */
+
+.register {}
+
+
+/* .register p0 {
+    padding: 0;
+} */
+
+.register .content {
+    padding: 0 1.5rem;
+}
+
+.register .form {
+    background: #f8f9fa;
+    padding: 5.5rem 7rem 7rem 7rem;
+}
+
+.register .row>[class*=col] {
+    padding: 0;
+}
+
+.register .form .form_title {
+    font-size: 2.4rem;
+    padding-bottom: 3rem;
+}
+
+.register .form .form_input {
+    padding-bottom: 2rem;
+}
+
+.register .form .form_input .attr {
+    font-size: 1.6rem;
+    padding-bottom: 5px;
+    color: gray;
+}
+
+.register .form .form_input input {
+    height: 5rem;
+    padding-left: 1.5rem;
+    width: 100%;
+    font-size: 1.6rem;
+    border: 1px solid gray;
+}
+
+.register .form .button button {
+    width: 100%;
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: sans-serif;
+    background-color: #fd7e14;
+    height: 5.2rem;
+}
+
+.register .event {
+    background: #0f2a5b;
+    padding: 5.5rem 7rem 7rem 7rem;
+}
+
+.register .event .list_event {
+    background-color: #ffffff0f;
+    padding: 2rem 2rem 2rem 2rem;
+    transition: 0.3s;
+}
+
+.register .event .list_event:hover {
+    background-color: #fd7e14;
+}
+
+.register .event .event_title {
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.register .event .list_event .image img {
+    width: 7.4rem;
+    height: 7.4rem;
+}
+
+.register .event .list_event {
+    margin-bottom: 3px;
+}
+
+.register .event .list_event .text {
+    padding-left: 2rem;
+}
+
+.register .event .list_event .text .meta_data {
+    padding-bottom: 2rem;
+}
+
+.register .event .list_event .text .meta_data .time {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.register .event .list_event .text .meta_data .time .fa-caret-right {
+    color: #fff;
+}
+
+.register .event .list_event .text .meta_data .time:first-child {
+    padding-right: 2rem;
+}
+
+.register .event .list_event .text .title {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+
+/* ======================== 9. Course section ==================== */
+
+.course {
+    padding: 6rem 0;
+}
+
+.course .content {
+    padding: 0 3rem;
+}
+
+.course .content .course_heading {
+    font-size: 3.6rem;
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+.course .list_item {
+    border: 1px solid gray;
+}
+
+.course .list_item .text {
+    position: relative;
+    background-color: #fff;
+}
+
+.course .list_item .text .image_circle {
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.course .list_item .text .image_circle img {
+    width: 8.4rem;
+    height: 8.4rem;
+    border-radius: 50%;
+    padding: 12px;
+    background-color: #fff;
+}
+
+.course .list_item .text {
+    text-align: center;
+    padding: 6rem 3rem 1.5rem 3rem;
+    transition: margin 0.3s;
+}
+
+.course .list_item .text .name {
+    color: #0f2a5b;
+    font-size: 1.8rem;
+    padding-bottom: 1.5rem;
+}
+
+.course .list_item .text .job {
+    font-size: 1.6rem;
+    padding-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.course .list_item .text .desc {
+    font-size: 1.6rem;
+    color: gray;
+    transition: height 0.3s;
+    overflow: hidden;
+    height: 0;
+}
+
+.course .list_item:hover .desc {
+    height: 56px;
+}
+
+.course .list_item:hover .text {
+    margin: -56px 0 0 0;
+}
+
+.course .list_item:hover {
+    box-shadow: 0 5px 15px #123e8a21;
+}
+
+.course .list_item .text_bottom {
+    border-top: 1px solid gray;
+    padding: 0 2rem;
+    height: 5.2rem;
+    align-items: center;
+}
+
+.course .list_item .text_bottom .count_lesson {
+    color: #0f2a5b;
+    font-size: 1.4rem;
+    flex: 3;
+}
+
+.course .list_item .text_bottom .view {
+    flex: 1;
+    border-left: 1px solid gray;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.course .list_item .text_bottom .view .link {
+    color: #ff8700;
+    font-size: 1.4rem;
+    display: flex;
+}
+
+.course .list_item .text_bottom .view .link .fa-caret-right {
+    padding-left: 1rem;
+}
+
+.course .content .view_course {
+    padding-top: 7rem;
+    text-align: center;
+}
+
+.course .content .view_course button {
+    background-color: #0f2a5b;
+    padding: 2rem 0 2rem 2rem;
+    text-align: left;
+    width: 35rem;
+    max-width: 100%;
+    margin: auto;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.course .content .view_course button .fa-caret-right {
+    position: absolute;
+    right: 2rem;
+    font-size: 2rem;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+
+/* ======================== 9. Solution section ==================== */
+
+.solution {
+    background: #0f2a5b;
+    padding: 5rem 0;
+}
+
+.solution .content {
+    padding: 0 3rem;
+}
+
+.solution .content .text_left {}
+
+.solution .content .text_left .title {
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+    color: #ff5f13;
+    letter-spacing: 2px;
+}
+
+.solution .content .text_left .desc {
+    font-size: 3.6rem;
+    line-height: 1.6;
+    color: #fff;
+    max-width: 47rem;
+}
+
+.solution .content .text_right .desc {
+    line-height: 1.6;
+    font-size: 1.6rem;
+    color: #9fa6bd;
+}
+
+.solution .content .solution_heading {
+    padding-bottom: 5rem;
+}
+
+.solution .list_item {
+    border: 2px solid gray;
+    border-radius: 4px;
+    padding: 4rem 0 3rem 0;
+}
+
+.solution .list_item .icon {
+    color: #fd7e14;
+    font-size: 5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+@keyframes zoomFade {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.solution .list_item .icon:hover i {
+    animation: zoomFade 1s 1;
+}
+
+.solution .list_item .text {
+    text-align: center;
+    color: #fff;
+}
+
+.solution .list_item .text .title {
+    font-size: 2.4rem;
+    padding-bottom: 2rem;
+}
+
+.solution .list_item .text .desc {
+    font-size: 1.6rem;
+    color: #a4acc3;
+    line-height: 1.5;
+}
+
+
+/* ======================== 10. Testimonaials section ==================== */
+
+.testimonial {
+    background-color: #0f2a5b;
+    padding: 5rem 0;
+}
+
+.testimonial .content {
+    padding: 0 3rem;
+}
+
+.testimonial .testimonial_heading {
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.testimonial .testimonial_heading .title {
+    font-size: 1.6rem;
+    padding-bottom: 2rem;
+    color: #ff5f13;
+    letter-spacing: 1px;
+}
+
+.testimonial .testimonial_heading .desc {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.testimonial .list_item {
+    background-color: #fff;
+    padding: 4rem;
+    border: 1px solid #fff;
+    border-radius: 6px;
+}
+
+.testimonial .list_item .text {
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.testimonial .list_item .text .desc {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.testimonial .list_item .image {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.testimonial .list_item .image img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+.testimonial .list_item .info {
+    text-align: center;
+}
+
+.testimonial .list_item .info .name {
+    font-size: 1.8rem;
+    padding-bottom: 1.5rem;
+}
+
+.testimonial .list_item .info .job {
+    font-size: 1.6rem;
+    color: #9fa6bd;
+}
+
+
+/* ======================== 11. Contact ==================== */
+
+.contact {
+    background: url(../images/bg-kids2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 8rem 0;
+}
+
+.contact .content {}
+
+.contact .content .title {
+    font-size: 3rem;
+    color: #0f2a5b;
+    padding-bottom: 3rem;
+}
+
+.contact .content .desc {
+    font-size: 1.8rem;
+    color: #0f2a5b;
+    padding-bottom: 2rem;
+}
+
+.contact .content .phone {
+    border: 2px solid #0f2a5b;
+    width: 35rem;
+    max-width: 100%;
+    font-size: 1.8rem;
+    color: #0f2a5b;
+    padding: 2rem 0;
+    font-weight: 600;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.contact .content .phone .fa-phone {
+    position: absolute;
+    left: 2rem;
+}
+
+
+/* ======================== 12. Footer ==================== */
+
+.footer {
+    background-color: #0f2a5b;
+}
+
+.footer .footer_top {
+    padding: 7rem 3rem 5rem 3rem;
+}
+
+.footer .footer_top .text {}
+
+.footer .footer_top .text .title {
+    font-size: 3.6rem;
+    padding-bottom: 3rem;
+    color: #ffff;
+}
+
+.footer .footer_top .text .desc:nth-child(2) {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    color: #fff;
+}
+
+.footer .footer_top .text .desc:nth-child(3) {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #9fa6bd;
+}
+
+.footer .footer_top .education {
+    margin-top: 11.5rem;
+}
+
+.footer .footer_top .education .title {
+    font-size: 2rem;
+    color: #fff;
+    padding-bottom: 2rem;
+}
+
+.footer .footer_top .education .desc {
+    font-size: 1.6rem;
+    color: #9fa6bd;
+    line-height: 1.7;
+}
+
+.footer .footer_top .info_contact {
+    margin-top: 15rem;
+}
+
+.footer .footer_top .info_contact p {
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
+    color: #fff;
+}
+
+.footer .footer_top .button {
+    margin-top: 11.5rem;
+}
+
+.footer .footer_top .button button {
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding: 8px 3rem;
+    height: 6.1rem;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.footer .footer_top .button .enquire {
+    background-color: #fff;
+    margin-bottom: 5px;
+    color: #0f2a5b;
+    position: relative;
+}
+
+.footer .footer_top .button .enquire i {
+    position: absolute;
+    right: 3rem;
+}
+
+.footer .footer_top .button .contact_us {
+    background-color: #ffc107;
+    color: #fff;
+    position: relative;
+}
+
+.footer .footer_top .button .contact_us i {
+    position: absolute;
+    right: 3rem;
+}
+
+.footer .footer_bottom {
+    padding: 3rem 4.5rem;
+    border-top: 2px solid #9fa6bd;
+}
+
+.footer .footer_bottom .copyright {
+    font-size: 1.6rem;
+    color: #9fa6bd;
+}
