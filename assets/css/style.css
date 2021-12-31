@@ -257,8 +257,9 @@ body {
     width: 20rem;
     position: absolute;
     top: 8rem;
+    visibility: hidden;
     opacity: 0;
-    transition: 0.3s;
+    transition: 0.3s all;
 }
 
 .header_bottom .list_menu .list_item:hover>.list_link {
@@ -266,12 +267,13 @@ body {
     margin-top: -4px;
 }
 
-.header_bottom .list_menu .list_item:hover>.list_link::after {
+.header_bottom .list_menu .list_item:first-child:hover>.list_link::after {
     content: "\f0d8";
 }
 
 .header_bottom .list_menu .list_item:hover .sub_menu {
     opacity: 1;
+   visibility: visible;
 }
 
 .header_bottom .list_menu .list_item .sub_menu .list_item_sub:hover {
@@ -306,14 +308,6 @@ body {
 .header_bottom .list_menu .list_item .sub_menu .list_item_sub .list_link {
     font-size: 1.6rem;
     color: #000;
-}
-
-.header_bottom .list_menu .list_item .sub_menu .list_item_sub:first-child::after {
-    content: "\f0da";
-    font-family: "FontAwesome";
-    position: absolute;
-    right: 2rem;
-    font-size: 1.6rem;
 }
 
 .header_bottom .icon {
