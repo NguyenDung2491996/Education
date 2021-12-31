@@ -101,9 +101,9 @@
     font-family: 'FontAwesome';
   }
 
-  /* .toggle-subMenu.change_content::after {
+  .toggle-subMenu.active::after {
     content: '\f077';
-  } */
+  }
 }
 
 /* ======================== 3.Slide ==================== */

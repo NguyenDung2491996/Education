@@ -16,5 +16,8 @@ if (iconDownElement) {
 }
 
 function handleToggleSubMenu() {
-  if (subMenuList) subMenuList.classList.toggle('show');
+  if (subMenuList) {
+    iconDownElement.classList.toggle('active');
+    subMenuList.classList.toggle('show');
+  }
 }
