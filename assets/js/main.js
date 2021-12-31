@@ -9,6 +9,9 @@ if (iconElement) {
 
 function handleToggleMenu() {
   if (menuList) menuList.classList.toggle('active');
+  if (!menuList.className.includes('active')) {
+    subMenuList.classList.remove('show');
+  }
 }
 
 if (iconDownElement) {
